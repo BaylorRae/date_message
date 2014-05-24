@@ -7,7 +7,8 @@ class DateMessage
     older: 'Last order was placed %s'
   }
 
-  def initialize(date, current_date)
+  def initialize(date, current_date = nil)
+    current_date ||= Date.today
     @date, @current_date = date, current_date
   end
 

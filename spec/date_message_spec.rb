@@ -2,6 +2,11 @@ require "./lib/date_message"
 
 describe DateMessage do
 
+  it "defaults current date to today" do
+    date_message = DateMessage.new(Date.new(2014, 1, 1))
+    date_message.current_date.should == Date.today
+  end
+
   context "today" do
     it "displays message for today" do
       today = Date.new(2014, 1, 1)
